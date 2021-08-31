@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Datalar_VE_UI/Shop/raf.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Probs/Caylar/Cay0/cay.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Datalar_VE_UI/Shop/Camera.gd" type="Script" id=3]
+
+[sub_resource type="CubeMesh" id=1]
+flip_faces = true
+
+[sub_resource type="Environment" id=2]
+
+[node name="Shop" type="Node"]
+
+[node name="RAF" type="Spatial" parent="."]
+
+[node name="raf" parent="RAF" instance=ExtResource( 1 )]
+transform = Transform( 0.199355, 0, -0.0160433, 0, 0.2, 0, 0.0160433, 0, 0.199355, -1.14869, -0.366872, -10.2206 )
+
+[node name="zemin" type="MeshInstance" parent="RAF"]
+transform = Transform( 10.0746, 0, 0, 0, 2.07174, 0, 0, 0, 11.3731, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="RAF"]
+transform = Transform( 0.559193, -0.0369138, -0.828215, 0, 0.999008, -0.0445261, 0.829038, 0.0248987, 0.558638, -2.42, -1.4, -9.429 )
+current = true
+script = ExtResource( 3 )
+
+[node name="cay" parent="RAF" instance=ExtResource( 2 )]
+transform = Transform( 0.0797984, 0, -0.0602679, 0, 0.1, 0, 0.0602679, 0, 0.0797984, -0.436859, 0.557974, -10.0235 )
+
+[node name="cay2" parent="RAF" instance=ExtResource( 2 )]
+transform = Transform( 0.0797984, 0, -0.0602679, 0, 0.1, 0, 0.0602679, 0, 0.0797984, -1.03319, 0.557974, -10.0235 )
+
+[node name="cay3" parent="RAF" instance=ExtResource( 2 )]
+transform = Transform( 0.0797984, 0, -0.0602679, 0, 0.1, 0, 0.0602679, 0, 0.0797984, -1.57953, 0.557974, -10.0235 )
+
+[node name="cay4" parent="RAF" instance=ExtResource( 2 )]
+transform = Transform( 0.0797984, 0, -0.0602679, 0, 0.1, 0, 0.0602679, 0, 0.0797984, -2.00956, 0.557974, -10.0235 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="isik" type="Spatial" parent="."]
+
+[node name="SpotLight" type="SpotLight" parent="isik"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.88647 )
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 36.4141
+spot_angle = 23.3931
+
+[node name="SpotLight2" type="SpotLight" parent="isik"]
+transform = Transform( 1, 0, 0, 0, 0.202616, 0.979258, 0, -0.979258, 0.202616, -1.40935, 3.23132, -9.64602 )
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 7.38264
+spot_angle = 42.1745
+
+[node name="shop" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="shop"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -347.0
+margin_top = -93.0
+color = Color( 0.517647, 0.054902, 0.329412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

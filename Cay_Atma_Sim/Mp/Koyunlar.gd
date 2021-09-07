@@ -1,5 +1,5 @@
 extends Spatial
-
+# Koyunlar otobüsün üstündeki ilahi güce tapmak için vardır. -Ardacorex
 
 
 var villager = preload("res://Insanlar/koylu/assets/koyluler.tscn")

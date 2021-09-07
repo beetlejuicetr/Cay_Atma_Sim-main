@@ -10,6 +10,7 @@ var sectorrr = Vector3(sector["x"],current_sector,sector["z"])
 var poss = Vector3()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	poss = self.transform.origin
 	pass # Replace with function body.
 
@@ -21,6 +22,7 @@ func _hareket():
 		else:
 			a += 1
 			current_sector = sector[str(a)]
+			get_parent().get_parent().current_sector = a
 			print(current_sector)
 	if Input.is_action_just_pressed("ui_up"):
 		if current_sector == sector["1"]:
@@ -30,6 +32,7 @@ func _hareket():
 			a -= 1
 			_r()
 			current_sector = sector[str(a)]
+			get_parent().get_parent().current_sector = a
 			print(current_sector)
 	pass
 func _physics_process(_delta):
@@ -50,3 +53,4 @@ func _r():
 		if self.transform.origin.y >= current_sector:
 			self.transform.origin.y -= 0.01
 	pass
+

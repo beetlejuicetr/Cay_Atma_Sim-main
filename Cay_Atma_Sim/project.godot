@@ -8,14 +8,32 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "SAVE",
+"language": "GDScript",
+"path": "res://Datalar_VE_UI/System/Save_Load/SL_Process.gd"
+} ]
+_global_script_class_icons={
+"SAVE": ""
+}
+
 [application]
 
 config/name="Cay Atma Sim"
+run/main_scene="res://Datalar_VE_UI/Menu/Main_menu/Main_menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 DATA="*res://Datalar_VE_UI/Data/DATA.gd"
+ShopData="*res://Datalar_VE_UI/Data/shop_data.gd"
+ReyonMaterialCont="*res://Datalar_VE_UI/Shop/reyon mat/Reyon_Material_cont.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [physics]
 
@@ -23,4 +41,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"

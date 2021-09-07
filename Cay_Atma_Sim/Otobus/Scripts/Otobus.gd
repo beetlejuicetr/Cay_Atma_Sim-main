@@ -15,7 +15,7 @@ func _physics_process(_delta):
 	_cay_at()
 	velocity = move_and_slide(velocity)
 	pass
-var cay0 = preload("res://Probs/Caylar/Cay1/cay.tscn")
+var cay0 = preload("res://Probs/Caylar/Cay0/Cay0.tscn")
 func _cay_at():
 	if man_anim.is_playing() == false:
 		man_anim.play("idle")

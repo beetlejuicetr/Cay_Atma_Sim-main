@@ -7,7 +7,7 @@ var Sectors = {
 	#cay2 320 , 4
 	#cay3 580 , 6
 	#cay4 1100 , 10
-	"sector1":{"status":false,"price":300,"cay1":{"status":false,"price":150,"texture":preload("res://Probs/Caylar/textures/caycur.png"),"pop_plus":2},"cay2":{"status":false,"price":320,"texture":preload("res://Probs/Caylar/textures/tipton_paket.png"),"pop_plus":4},"cay3":{"status":false,"price":580,"texture":preload("res://Probs/Caylar/textures/dodus_paket.png"),"pop_plus":6},"cay4":{"status":false,"price":1100,"texture":preload("res://Probs/Caylar/textures/alphatea_paket.png"),"pop_plus":10}},
+	"sector1":{"status":false,"price":300,"cay1":{"status":false,"name":"Caycur","price":150,"texture":preload("res://Probs/Caylar/textures/caycur.png"),"pop_plus":2},"cay2":{"status":false,"name":"Tipton","price":320,"texture":preload("res://Probs/Caylar/textures/tipton_paket.png"),"pop_plus":4},"cay3":{"status":false,"name":"Doduş","price":580,"texture":preload("res://Probs/Caylar/textures/dodus_paket.png"),"pop_plus":6},"cay4":{"status":false,"name":"Alpha Tea","price":1100,"texture":preload("res://Probs/Caylar/textures/alphatea_paket.png"),"pop_plus":10}},
 	
 	
 	
@@ -17,7 +17,7 @@ var Sectors = {
 	#cay2 2250 , 16
 	#cay3 5300 , 20
 	#cay4 10500 , 25
-	"sector2":{"status":false,"price":2500,"cay1":{"status":false,"price":1200,"texture":null,"pop_plus":12},"cay2":{"status":false,"price":2250,"texture":null,"pop_plus":16},"cay3":{"status":false,"price":5300,"texture":null,"pop_plus":20},"cay4":{"status":false,"price":10500,"texture":null,"pop_plus":25}},
+	"sector2":{"status":false,"price":2500,"cay1":{"status":false,"name":"Caycur","price":1200,"texture":null,"pop_plus":12},"cay2":{"status":false,"name":"Tipton","price":2250,"texture":null,"pop_plus":16},"cay3":{"status":false,"name":"Doduş","price":5300,"texture":null,"pop_plus":20},"cay4":{"status":false,"name":"Alpha Tea","price":10500,"texture":null,"pop_plus":25}},
 	
 	
 	

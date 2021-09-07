@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Reference",
-"class": "SAVE",
-"language": "GDScript",
-"path": "res://Datalar_VE_UI/System/Save_Load/SL_Process.gd"
-} ]
-_global_script_class_icons={
-"SAVE": ""
-}
-
 [application]
 
 config/name="Cay Atma Sim"
@@ -29,6 +19,7 @@ config/icon="res://icon.png"
 DATA="*res://Datalar_VE_UI/Data/DATA.gd"
 ShopData="*res://Datalar_VE_UI/Data/shop_data.gd"
 ReyonMaterialCont="*res://Datalar_VE_UI/Shop/reyon mat/Reyon_Material_cont.gd"
+SlProcess="*res://Datalar_VE_UI/System/Save_Load/SL_Process.gd"
 
 [display]
 

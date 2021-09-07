@@ -22,7 +22,8 @@ extends Node
 func _ready():
 	ReyonMaterialCont._set_material()
 	print(ShopData.Money)
-	pass
+	
+	
 
 onready var cay_paketi = get_node("RAF/reyon"+str(current_sector)+"/cay"+str(_hangi_cay))
 
@@ -44,6 +45,7 @@ func _physics_process(delta):
 			ShopData.Money -= ShopData.Sectors["sector"+str(current_sector)]["price"] 
 			ShopData.Sectors["sector"+str(current_sector)]["status"] = true
 			print(ShopData.Money)
+			SlProcess._save()
 			yield(get_tree().create_timer(1),"timeout")
 			a = false
 			b = false
@@ -87,6 +89,7 @@ func _hareket():
 			eski_cay_paketi = cay_paketi
 			cay_paketi = get_node("RAF/reyon"+str(current_sector)+"/cay"+str(_hangi_cay))
 			print(_hangi_cay)
+		$MENU._changed_item("sector"+str(current_sector),"cay"+str(_hangi_cay))
 		pass
 	
 		#---------------------------- Çaylar Arasında Geçiş Kodu --------------------------------#
@@ -103,6 +106,7 @@ func _hareket():
 			eski_cay_paketi = cay_paketi
 			cay_paketi = get_node("RAF/reyon"+str(current_sector)+"/cay"+str(_hangi_cay))
 			print(_hangi_cay)
+		$MENU._changed_item("sector"+str(current_sector),"cay"+str(_hangi_cay))
 		pass
 	
 	
@@ -114,12 +118,16 @@ func _hareket():
 				ShopData.Money -= ShopData.Sectors["sector"+str(current_sector)]["cay"+str(_hangi_cay)]["price"]
 				ShopData.Sectors["sector"+str(current_sector)]["cay"+str(_hangi_cay)]["status"] = true
 				print(cay_paketi)
+				SlProcess._save()
+				$MENU._changed_item("sector"+str(current_sector),"cay"+str(_hangi_cay))
 			pass
 		if Input.is_action_just_pressed("ui_accept") && _hangi_cay >= 1:
 			if ShopData.Sectors["sector"+str(current_sector)]["cay"+str(_hangi_cay)]["status"] == true:
 				ShopData.Current_Cay_Paketi["texture"] = ShopData.Sectors["sector"+str(current_sector)]["cay"+str(_hangi_cay)]["texture"]
 				ShopData.Current_Cay_Paketi["pop_plus"] = ShopData.Sectors["sector"+str(current_sector)]["cay"+str(_hangi_cay)]["pop_plus"]
 				print(cay_paketi," selected! ",ShopData.Current_Cay_Paketi["texture"],ShopData.Current_Cay_Paketi["pop_plus"])
+				SlProcess._save()
+				$MENU._changed_item("sector"+str(current_sector),"cay"+str(_hangi_cay))
 		pass
 	pass
 
@@ -145,5 +153,7 @@ func _reset():
 		_hangi_cay = 0
 		eski_cay_paketi = cay_paketi
 		cay_paketi = get_node("RAF/reyon"+str(current_sector)+"/cay"+str(_hangi_cay))
+		$MENU._changed_item("sector"+str(current_sector),"cay"+str(_hangi_cay))
+		#sector,cay
 
 

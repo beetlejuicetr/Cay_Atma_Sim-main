@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Datalar_VE_UI/Shop/raf.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Datalar_VE_UI/Shop/cay_meshs/cay.tres" type="ArrayMesh" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Probs/Caylar/textures/caycur.png" type="Texture" id=10]
 [ext_resource path="res://Probs/Caylar/textures/dodus_paket.png" type="Texture" id=11]
 [ext_resource path="res://Probs/Caylar/textures/alphatea_paket.png" type="Texture" id=12]
+[ext_resource path="res://Datalar_VE_UI/FONT/OpenSansCondensed-Bold.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Datalar_VE_UI/FONT/OpenSansCondensed-Light.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Datalar_VE_UI/Shop/MENU.gd" type="Script" id=15]
 
 [sub_resource type="CubeMesh" id=1]
 flip_faces = true
@@ -41,6 +44,20 @@ albedo_texture = ExtResource( 12 )
 size = Vector3( 2.3, 0.65, 0.5 )
 
 [sub_resource type="Environment" id=8]
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 26
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 14 )
 
 [node name="Shop" type="Node"]
 script = ExtResource( 4 )
@@ -126,3 +143,95 @@ shadow_enabled = true
 shadow_reverse_cull_face = true
 spot_range = 7.38264
 spot_angle = 42.1745
+
+[node name="MENU" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.943909
+margin_top = -1.88776
+margin_right = 0.943848
+margin_bottom = -1.88776
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MENU"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -396.0
+margin_top = -175.0
+
+[node name="cay_name" type="Label" parent="MENU/Panel"]
+margin_left = 35.0562
+margin_top = 24.8878
+margin_right = 143.056
+margin_bottom = 51.8878
+custom_fonts/font = SubResource( 9 )
+text = "CAYCUR :"
+
+[node name="cay_pop" type="Label" parent="MENU/Panel"]
+margin_left = 123.056
+margin_top = 24.8878
+margin_right = 265.056
+margin_bottom = 60.8878
+custom_fonts/font = SubResource( 10 )
+text = "1200 popülasyon"
+valign = 1
+
+[node name="özellikler" type="Panel" parent="MENU/Panel"]
+margin_left = 35.0
+margin_top = 57.0
+margin_right = 307.0
+margin_bottom = 161.0
+
+[node name="özellikler_baslik" type="Label" parent="MENU/Panel/özellikler"]
+margin_left = 0.0561523
+margin_top = 15.8878
+margin_right = 70.0562
+margin_bottom = 29.8878
+custom_fonts/font = SubResource( 11 )
+text = "Özellikler ;"
+
+[node name="pop_plus" type="Label" parent="MENU/Panel/özellikler"]
+margin_top = 47.8878
+margin_right = 40.0
+margin_bottom = 61.8878
+custom_fonts/font = SubResource( 12 )
+text = "Popülasyon : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deger" type="Label" parent="MENU/Panel/özellikler/pop_plus"]
+margin_left = 72.0562
+margin_right = 142.056
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 12 )
+text = "+50"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="durum" type="Label" parent="MENU/Panel/özellikler"]
+margin_top = 70.8878
+margin_right = 70.0
+margin_bottom = 93.8878
+custom_fonts/font = SubResource( 12 )
+text = "Durum :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deger" type="Label" parent="MENU/Panel/özellikler/durum"]
+margin_left = 48.0562
+margin_right = 118.056
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Satın Alınmadı!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

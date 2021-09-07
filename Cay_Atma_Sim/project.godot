@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="Cay Atma Sim"
-run/main_scene="res://Datalar_VE_UI/Menu/Main_menu/Main_menu.tscn"
+run/main_scene="res://Datalar_VE_UI/splash_screen/MAIND.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="cay_atma_sim"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]

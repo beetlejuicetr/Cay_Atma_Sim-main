@@ -149,6 +149,8 @@ func _cay_geri():
 
 # -------------------- Reyonlar Değiştiğinde Seçilen Çay Geri Fonksiyonlarına Döner --------------------#
 func _reset():
+	if Input.is_action_just_pressed("ui_end"):
+		get_tree().change_scene("res://Mp/MP.tscn")
 	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):
 		_hangi_cay = 0
 		eski_cay_paketi = cay_paketi

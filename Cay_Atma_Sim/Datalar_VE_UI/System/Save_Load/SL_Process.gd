@@ -22,10 +22,7 @@ var DATA_REYON = DATA.Reyon_Mat
 
 ### kaldığım yer data belirleme
 var a = "1111kelek0000"
-func _ready():
-	print(save_path,int("1"))
-	_save()
-	_load()
+
 func _save():
 	for i in save_save:
 		

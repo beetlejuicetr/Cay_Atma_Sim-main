@@ -252,6 +252,7 @@ surfaces/0 = {
 }
 
 [node name="cay3" type="Spatial"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 
 [node name="Cube" type="MeshInstance" parent="."]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )

@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Datalar_VE_UI/FONT/OpenSansCondensed-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Datalar_VE_UI/splash_screen/MAIND.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 256
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "goog"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5, 3, 3.5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="MAIND" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 314.946
+margin_top = 121.924
+margin_right = 515.946
+margin_bottom = 470.924
+custom_fonts/font = SubResource( 1 )
+text = "M"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 486.955
+margin_top = 121.924
+margin_right = 574.955
+margin_bottom = 470.924
+custom_fonts/font = SubResource( 1 )
+text = "I"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 535.007
+margin_top = 121.924
+margin_right = 678.007
+margin_bottom = 470.924
+custom_fonts/font = SubResource( 1 )
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/goog = SubResource( 2 )
